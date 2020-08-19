@@ -6,7 +6,7 @@ const Testimonial = require('../models/Testimoniales');
 
 exports.consultasHomepage= async(req,res) => { 
     const viajes = await Viaje.findAll({limit: 3});
-    
+    console.log(viajes.fecha_ida);
     
     const testimoniales= await Testimonial.findAll({limit: 3});
     
